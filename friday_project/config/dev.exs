@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :friday_project, FridayProject.Repo,
-  username: "dilo",
-  password: "dilo",
+  username: "adel",
+  password: "toto",
   hostname: "localhost",
   database: "friday_project_dev",
   stacktrace: true,
