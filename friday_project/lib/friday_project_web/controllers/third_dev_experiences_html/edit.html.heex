@@ -1,0 +1,8 @@
+<.header>
+  Edit Third dev experiences <%= @third_dev_experiences.id %>
+  <:subtitle>Use this form to manage third_dev_experiences records in your database.</:subtitle>
+</.header>
+
+<.third_dev_experiences_form changeset={@changeset} action={~p"/third_dev_experiences/#{@third_dev_experiences}"} />
+
+<.back navigate={~p"/third_dev_experiences"}>Back to third_dev_experiences</.back>

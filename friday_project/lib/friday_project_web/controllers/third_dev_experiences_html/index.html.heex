@@ -1,0 +1,24 @@
+<.header>
+  Listing Third dev experiences
+  <:actions>
+    <.link href={~p"/third_dev_experiences/new"}>
+      <.button>New Third dev experiences</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="third_dev_experiences" rows={@third_dev_experiences} row_click={&JS.navigate(~p"/third_dev_experiences/#{&1}")}>
+  <:col :let={third_dev_experiences} label="Name"><%= third_dev_experiences.name %></:col>
+  <:col :let={third_dev_experiences} label="Age"><%= third_dev_experiences.age %></:col>
+  <:action :let={third_dev_experiences}>
+    <div class="sr-only">
+      <.link navigate={~p"/third_dev_experiences/#{third_dev_experiences}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/third_dev_experiences/#{third_dev_experiences}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={third_dev_experiences}>
+    <.link href={~p"/third_dev_experiences/#{third_dev_experiences}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>
